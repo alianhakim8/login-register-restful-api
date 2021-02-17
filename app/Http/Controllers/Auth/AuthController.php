@@ -46,7 +46,7 @@ class AuthController extends Controller
                 if($errorCode == '1048'){
                     $error = [
                         
-                        'message' => 'duplicated data',
+                        'message' => $e->getMessage(),
                         'code' => 401,
 
                     ];
@@ -55,7 +55,7 @@ class AuthController extends Controller
                 } else {
                     $error = [
                         
-                        'message' => 'duplicated data',
+                        'message' => $error,
                         'code' => 401,
 
                     ];
